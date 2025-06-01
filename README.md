@@ -1,6 +1,6 @@
 # Template for a static web app based on HTML, CSS & TypeScript
 
-In order to get started with this template, ensure npm is installed on your machine.
+In order to get started with this template, ensure `npm` is installed on your machine.
 
 When running in VS Code, the template supports TypeScript Debugging.
 
