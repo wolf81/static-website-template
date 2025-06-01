@@ -1,4 +1,4 @@
 const greeting = function(): void {
-    alert(`Hello!`);
+    alert("Hello!");
 }
 

@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Serve2",
+            "command": "./node_modules/.bin/browser-sync",
+            "type": "shell",
+            "args": ["start", "--server", "\"dist\"", "--files", "\"dist\"", "--no-open"],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+            },
+            "isBackground": true,
+            "problemMatcher": [],
+            "auto": true, // relies on AutoLaunch extension
+        },
+        {
+            "label": "Monitor TypeScript errors",
+            "command": "npx",
+            "type": "shell",
+            "args": ["tsc", "--watch", "--noEmit", "--project", "."],
+            "presentation": {
+                "echo": true,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "close": true,
+                "revealProblems": "onProblem",
+            },
+            "isBackground": true,
+            "problemMatcher": "$tsc-watch",
+            "auto": true, // relies on AutoLaunch extension
+        }
+    ]
+} 
