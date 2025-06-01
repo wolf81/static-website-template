@@ -5,8 +5,6 @@ In order to get started with this template, ensure npm is installed on your mach
 Then:
 
 ```sh
-$ npm install
-$ npm watch
+$ npm install # install dependencies - only needed first time
+$ npm run watch # edit files & get live updates!
 ```
-
-Now whenever a file changes, the website is live updated
