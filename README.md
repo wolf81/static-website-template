@@ -2,6 +2,8 @@
 
 In order to get started with this template, ensure npm is installed on your machine.
 
+When running in VS Code, the template supports TypeScript Debugging.
+
 Then:
 
 ```sh
