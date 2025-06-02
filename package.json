@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
+    "serve": "browser-sync start --config bs-config.js",
     "watch:css": "onchange \"src/style/**/*.css\" -- npm run build:css",
-    "build:css": "copyfiles -u 1 src/style/**/*.css dist",
+    "build:css": "copyfiles -u 1 \"src/style/**/*.css\" dist",
     "build:ts": "tsc",
-    "watch:ts": "onchange \"src/**/*.ts\" -- npm run build:ts",
+    "watch:ts": "tsc -w",
     "watch:html": "onchange \"src/**/*.html\" -- npm run build:html",
-    "build:html": "copyfiles -u 1 src/**/*.html dist",
+    "build:html": "copyfiles -u 1 \"src/**/*.html\" dist",
     "watch": "npm run build && run-p serve watch:*",
     "build": "run-p build:*"
   },
