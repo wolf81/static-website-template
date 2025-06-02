@@ -1,11 +1,12 @@
 {
-  "name": "genesis",
+  "name": "static-website-template",
   "version": "1.0.0",
-  "description": "World generation tools",
+  "description": "Static website template based on HTML, CSS & JavaScript - with live browser updates.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "browser-sync start --config bs-config.js",
+    "serve-vsc": "browser-sync start --config bs-config.js --no-open",
     "watch:css": "onchange \"src/style/**/*.css\" -- npm run build:css",
     "build:css": "copyfiles -u 1 \"src/style/**/*.css\" dist",
     "build:ts": "tsc",
@@ -13,18 +14,19 @@
     "watch:html": "onchange \"src/**/*.html\" -- npm run build:html",
     "build:html": "copyfiles -u 1 \"src/**/*.html\" dist",
     "watch": "npm run build && run-p serve watch:*",
+    "watch-vsc": "npm run build && run-p watch:*",
     "build": "run-p build:*"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wolf81/genesis.git"
+    "url": "git+https://github.com/wolf81/static-website-template.git"
   },
   "author": "Wolfgang Schreurs",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wolf81/genesis/issues"
+    "url": "https://github.com/wolf81/static-website-template/issues"
   },
-  "homepage": "https://github.com/wolf81/genesis#readme",
+  "homepage": "https://github.com/wolf81/static-website-template#readme",
   "devDependencies": {
     "browser-sync": "^3.0.4",
     "copyfiles": "^2.4.1",

@@ -2,15 +2,17 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Serve2",
-            "command": "./node_modules/.bin/browser-sync",
+            "label": "Serve",
+            "command": "npm",
             "type": "shell",
-            "args": ["start", "--server", "\"dist\"", "--files", "\"dist\"", "--no-open"],
+            "args": ["run", "serve-vsc"],
             "presentation": {
                 "echo": true,
                 "reveal": "always",
                 "focus": false,
                 "panel": "shared",
+                "close": true,
+                "revealProblems": "onProblem",
             },
             "isBackground": true,
             "problemMatcher": [],
@@ -20,7 +22,7 @@
             "label": "Monitor TypeScript errors",
             "command": "npm",
             "type": "shell",
-            "args": ["run", "watch"],
+            "args": ["run", "watch-vsc"],
             "presentation": {
                 "echo": true,
                 "reveal": "never",
