@@ -5,7 +5,7 @@
             "label": "Serve",
             "command": "npm",
             "type": "shell",
-            "args": ["run", "serve-vsc"],
+            "args": ["run", "dev-vsc"],
             "presentation": {
                 "echo": true,
                 "reveal": "always",
@@ -18,22 +18,5 @@
             "problemMatcher": [],
             "auto": true, // relies on AutoLaunch extension
         },
-        {
-            "label": "Monitor TypeScript errors",
-            "command": "npm",
-            "type": "shell",
-            "args": ["run", "watch-vsc"],
-            "presentation": {
-                "echo": true,
-                "reveal": "never",
-                "focus": false,
-                "panel": "shared",
-                "close": true,
-                "revealProblems": "onProblem",
-            },
-            "isBackground": true,
-            "problemMatcher": "$tsc-watch",
-            "auto": true, // relies on AutoLaunch extension
-        }
     ]
 } 

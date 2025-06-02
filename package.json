@@ -4,18 +4,12 @@
   "description": "Static website template based on HTML, CSS & JavaScript - with live browser updates.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "browser-sync start --config bs-config.js",
-    "serve-vsc": "browser-sync start --config bs-config.js --no-open",
-    "watch:css": "onchange \"src/style/**/*.css\" -- npm run build:css",
-    "build:css": "copyfiles -u 1 \"src/style/**/*.css\" dist",
-    "build:ts": "tsc",
-    "watch:ts": "tsc -w",
-    "watch:html": "onchange \"src/**/*.html\" -- npm run build:html",
-    "build:html": "copyfiles -u 1 \"src/**/*.html\" dist",
-    "watch": "npm run build && run-p serve watch:*",
-    "watch-vsc": "npm run build && run-p watch:*",
-    "build": "run-p build:*"
+    "serve": "live-server dist --port=3000",
+    "serve-vsc": "live-server dist --port=3000 --no-browser",
+    "watch": "onchange \"src/**/*\" -- npm run build",
+    "build": "copyfiles -u 1 \"src/**/*\" dist",
+    "dev": "run-p serve watch",
+    "dev-vsc": "run-p serve-vsc watch"
   },
   "repository": {
     "type": "git",
@@ -28,10 +22,9 @@
   },
   "homepage": "https://github.com/wolf81/static-website-template#readme",
   "devDependencies": {
-    "browser-sync": "^3.0.4",
     "copyfiles": "^2.4.1",
+    "live-server": "^1.2.2",
     "npm-run-all": "^4.1.5",
-    "onchange": "^7.1.0",
-    "typescript": "^5.8.3"
+    "onchange": "^7.1.0"
   }
 }
