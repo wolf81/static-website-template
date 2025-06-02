@@ -18,9 +18,9 @@
         },
         {
             "label": "Monitor TypeScript errors",
-            "command": "npx",
+            "command": "npm",
             "type": "shell",
-            "args": ["tsc", "--watch", "--noEmit", "--project", "."],
+            "args": ["run", "watch"],
             "presentation": {
                 "echo": true,
                 "reveal": "never",
