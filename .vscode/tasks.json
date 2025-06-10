@@ -5,7 +5,7 @@
             "label": "Serve",
             "command": "npm",
             "type": "shell",
-            "args": ["run", "dev-vsc"],
+            "args": ["run", "dev"],
             "presentation": {
                 "echo": true,
                 "reveal": "always",
